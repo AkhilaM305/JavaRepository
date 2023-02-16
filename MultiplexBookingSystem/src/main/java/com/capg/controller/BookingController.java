@@ -35,7 +35,7 @@ public Booking addBooking(@RequestBody Booking booking) {
 	return bookingService.addBooking(booking);
 }
 
-@GetMapping
+@GetMapping("/booking")
 public List<Booking> findAll() {
 	return bookingService.findAll();
 }
@@ -44,17 +44,14 @@ public List<Booking> findAll() {
 public ResponseEntity findById(@PathVariable long id) throws BookingNotFoundException {
     return new ResponseEntity(this.bookingService.findById(id),HttpStatus.OK);
 }
-//public Booking findById(@PathVariable long id) {
-//	return bookingService.findById(id);
-//}
 
 @GetMapping("/date/{date}")
 public List<Booking> findByDate(@PathVariable LocalDate date) {
 	return bookingService.findByDate(date);
 }
 
-@DeleteMapping
-public void deleteBooking(@RequestBody Booking booking) {
-	bookingService.deleteBooking(booking);
+@DeleteMapping("/booking/{id}")
+public Booking deleteBooking(@PathVariable long id) {
+	return bookingService.deleteBooking(id);
 }
 }

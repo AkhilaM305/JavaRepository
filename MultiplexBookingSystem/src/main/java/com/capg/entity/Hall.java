@@ -1,11 +1,6 @@
 package com.capg.entity;
 
-
-
-
 import javax.persistence.*;
-
-
 
 @Entity
 @Table(name="hall")
@@ -18,18 +13,13 @@ public class Hall {
 	@Column(name="seat_number")
 	private int seatNumber;
 	
-	
-	
-//	@OneToMany(mappedBy="hall")
-//	private Set<Shows> shows;
-	
 	public Hall() {}
 
 	public Hall(long id, int seatNumber) {
 		super();
 		this.id = id;
 		this.seatNumber = seatNumber;
-//		this.shows = shows;
+
 	}
 
 	public long getId() {
@@ -40,12 +30,6 @@ public class Hall {
 		return seatNumber;
 	}
 
-	
-
-//	public Set<Shows> getShows() {
-//		return shows;
-//	}
-
 	public void setId(long id) {
 		this.id = id;
 	}
@@ -54,11 +38,6 @@ public class Hall {
 		this.seatNumber = seatNumber;
 	}
 
-	
-
-//	public void setShows(Set<Shows> shows) {
-//		this.shows = shows;
-//	}
 
 	@Override
 	public String toString() {

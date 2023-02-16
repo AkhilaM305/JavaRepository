@@ -35,8 +35,7 @@ public class MultiplexBookingSystemApplicationTests {
 	}
 	
 	
-//	@Autowired
-//	private ObjectMapper objectMapper;
+
 	
 
 	

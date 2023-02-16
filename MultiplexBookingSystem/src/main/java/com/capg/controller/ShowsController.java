@@ -40,9 +40,6 @@ public class ShowsController {
 	public Shows findShowById(@PathVariable long id) throws ShowNotFoundException {
         return  (this.showsService.findShowById(id));
 	}
-//	public Shows findShowById(@PathVariable long id) {
-//		return showsService.findShowById(id);
-//	}
 	
 	@PutMapping("/shows")
 	public Shows updateShow(@RequestBody Shows show) {

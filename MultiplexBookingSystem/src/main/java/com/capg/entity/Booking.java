@@ -22,8 +22,6 @@ public class Booking {
 	@Column(name="show_date")
 	private LocalDate showDate;
 	
-	//@JoinColumn(name="show_time")
-	//private Shows shows;
 	
 	public Booking() {}
 

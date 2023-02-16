@@ -40,9 +40,7 @@ public class HallServiceImpl implements HallService {
  }
  return hall;
  }
-// 
-//   return hallRepository.findById(id).orElse(null);
-// }
+
  
  @Override
  public List<Hall> getAllHalls() {
@@ -50,51 +48,3 @@ public class HallServiceImpl implements HallService {
  }
 }
 
-//
-//	import java.util.List;
-//
-//	import javax.persistence.EntityManager;
-//	import javax.persistence.PersistenceContext;
-//	import javax.persistence.TypedQuery;
-//
-//	import org.springframework.stereotype.Repository;
-//
-//	import com.capg.entity.Hall;
-//
-//	@Repository
-//	public class HallServiceImpl implements HallService {
-//
-//	 @PersistenceContext
-//	 private EntityManager entityManager;
-//	 
-//	 @Override
-//	 public Hall addHall(Hall hall) {
-//	  entityManager.persist(hall);
-//	  return hall;
-//	 }
-//	 
-//	 @Override
-//	 public Hall updateHall(Hall hall) {
-//	  entityManager.merge(hall);
-//	  return hall;
-//	 }
-//	 
-//	 @Override
-//	 public void deleteHall(long id) {
-//	  Hall hall=entityManager.find(Hall.class, id);
-//	  entityManager.remove(hall);
-//	 }
-//	 
-//	 @Override
-//	 public Hall getHallById(long id) {
-//	  return entityManager.find(Hall.class, id);
-//	 }
-//	 
-//	 @Override
-//	 public List<Hall> getAllHalls() {
-//	  TypedQuery<Hall> query=entityManager.createQuery("from Hall", Hall.class);
-//	  return query.getResultList();
-//	 }
-//	 
-//	}
-//

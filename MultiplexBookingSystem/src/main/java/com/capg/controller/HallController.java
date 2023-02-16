@@ -41,9 +41,6 @@ public class HallController {
     public ResponseEntity getHallById(@PathVariable long id) throws HallNotFoundException {
         return new ResponseEntity(this.hallService.getHallById(id),HttpStatus.OK);
     }
-//    public Hall getHall(@PathVariable long id) {
-//        return hallService.getHallById(id);
-//    }
 
     @GetMapping("/all")
     public List<Hall> getAllHalls() {

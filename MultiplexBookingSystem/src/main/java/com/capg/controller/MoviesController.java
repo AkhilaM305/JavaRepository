@@ -30,12 +30,11 @@ public class MoviesController {
     }
 
     @GetMapping("/movies/{id}")
+    
     public ResponseEntity getMovieById(@PathVariable long id) throws MovieNotFoundException {
         return new ResponseEntity(this.moviesService.getMovieById(id),HttpStatus.OK);
     }
-//    public Movies getMovieById(@PathVariable long id) {
-//        return moviesService.getMovieById(id);
-//    }
+
 
     @PostMapping("/movies")
     public Movies addMovie(@RequestBody Movies movie) {

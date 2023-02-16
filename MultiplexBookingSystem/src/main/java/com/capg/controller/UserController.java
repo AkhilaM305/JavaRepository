@@ -25,10 +25,6 @@ public class UserController {
 @Autowired
 UserService userService;
 
-//@PostMapping("/users")
-//public User addUser(@RequestBody User user) {
-//	return userService.addUser(user);
-//}
 @PostMapping("/users")
 public ResponseEntity addUser(@RequestBody User user) throws UserAlreadyExistsException {
     User use= this.userService.addUser(user);
